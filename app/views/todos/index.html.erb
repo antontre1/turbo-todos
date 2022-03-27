@@ -1,0 +1,14 @@
+<div class="mx-auto max-w-3xl mt-24">
+  <h1 class="font-bold text-4xl mb-6">Todos !</h1>
+  <%= render "form", todo: Todo.new %>
+  <div id="todos" class="divide-y list-none">
+    <%= render partial: "todo", collection: @todos %>
+  </div>
+</div>
+
+  <%
+=begin%>
+  pour mémoire de la syntaxe du partial classique. A noter qu'une collection se passe par collection: @macollection
+ <%= render partial: "shared/articles_med_list", locals: { articles: @articles_last, avatar_visible: true, scope: @scope_last } %>
+<%
+=end%>
